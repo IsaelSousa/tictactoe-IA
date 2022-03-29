@@ -19,15 +19,7 @@ namespace tictactoe
         void Ofensive()
         {
             // Verificar possibilidades de vitória para a IA.
-            // Campo 3
-            if (button1.Text == "O" && button2.Text == "O" && button3.Text == "" || button7.Text == "O" && button5.Text == "O" && button3.Text == "" || button9.Text == "O" && button6.Text == "O" && button3.Text == "")
-            {
-                button3.Text = "O";
-                rodadas++;
-                turning = false;
-            }
-
-            // Campo 1
+            // Campo 1 - Linha 1
             if (button3.Text == "O" && button2.Text == "O" && button1.Text == "" || button9.Text == "O" && button5.Text == "O" && button1.Text == "" || button7.Text == "O" && button4.Text == "O" && button1.Text == "")
             {
                 button1.Text = "O";
@@ -36,10 +28,67 @@ namespace tictactoe
             }
 
             // Campo 2
-            if (button1.Text == "O" && button2.Text == "" && button3.Text == "O")
+            if (button1.Text == "O" && button2.Text == "" && button3.Text == "O" || button8.Text == "O" && button5.Text == "O" && button2.Text == "")
             {
                 button2.Text = "O";
+                rodadas++;
+                turning = false;
+            }
 
+            // Campo 3
+            if (button1.Text == "O" && button2.Text == "O" && button3.Text == "" || button7.Text == "O" && button5.Text == "O" && button3.Text == "" || button9.Text == "O" && button6.Text == "O" && button3.Text == "")
+            {
+                button3.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 4
+            if (button1.Text == "O" && button4.Text == "" && button7.Text == "O" || button6.Text == "O" && button5.Text == "O" && button4.Text == "")
+            {
+                button4.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 5
+            if (button4.Text == "O" && button5.Text == "" && button6.Text == "O" || button2.Text == "O" && button5.Text == "" && button8.Text == "O" || button1.Text == "O" && button5.Text == "" && button9.Text == "O" || button3.Text == "O" && button5.Text == "" && button7.Text == "O")
+            {
+                button5.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 6
+            if (button4.Text == "O" && button5.Text == "O" && button6.Text == "" || button3.Text == "O" && button6.Text == "" && button9.Text == "O")
+            {
+                button6.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 7
+            if (button1.Text == "O" && button4.Text == "O" && button7.Text == "" || button3.Text == "O" && button5.Text == "O" && button7.Text == "" || button7.Text == "" && button8.Text == "O" && button9.Text == "O")
+            {
+                button7.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 8
+            if (button7.Text == "O" && button8.Text == "" && button9.Text == "O" || button2.Text == "O" && button5.Text == "O" && button8.Text == "")
+            {
+                button8.Text = "O";
+                rodadas++;
+                turning = false;
+            }
+
+            // Campo 9
+            if (button7.Text == "O" && button8.Text == "O" && button9.Text == "" || button1.Text == "O" && button5.Text == "O" && button9.Text == "" || button3.Text == "O" && button6.Text == "O" && button9.Text == "")
+            {
+                button9.Text = "O";
+                rodadas++;
+                turning = false;
             }
         }
 
